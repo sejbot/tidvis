@@ -28,7 +28,7 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     func didPressButton(button: UIButton) {
         if(!isTimerRunning) {
             timerLights.stopAnimation();
-            secondsLeft = Int((button.titleLabel?.text)!)! * 60;
+            secondsLeft = Int((button.titleLabel?.text)!)! * 60 - 1;
             timerLights.selectLightsBasedOnSecondsLeft(seconds: secondsLeft);
             runTimer();
         }

@@ -30,12 +30,12 @@ import UIKit
     //MARK: Public functions
     func selectLightsBasedOnSecondsLeft(seconds: Int) {
         let minutesLeft: Int = seconds / 60;
-        for index in 0..<lights.count {
-            if(index < minutesLeft) {
-                lights[index].backgroundColor = selectedLightColor;
+        for (index, light) in lights.enumerated() {
+            if(index <= minutesLeft ) {
+                light.backgroundColor = selectedLightColor;
             }
             else {
-                lights[index].backgroundColor = normalLightColor;
+                light.backgroundColor = normalLightColor;
             }
         }
     }
@@ -43,6 +43,7 @@ import UIKit
     func showTimeIsUp() {
         for light in lights {
             light.flashBetweenColors(fromColor: selectedLightColor, toColor: normalLightColor);
+            light.backgroundColor = normalLightColor;
         }
     }
     
