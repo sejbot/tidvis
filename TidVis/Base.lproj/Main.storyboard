@@ -29,6 +29,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rEM-MW-yDG" customClass="TimerLights" customModule="TidVis" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="627" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.7019608021" green="0.7019608021" blue="0.7019608021" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -36,6 +40,7 @@
                     <connections>
                         <outlet property="TimeLeftLabel" destination="kdc-Zf-WLo" id="O4a-R2-Ycq"/>
                         <outlet property="selectTimeControl" destination="efq-no-Oc0" id="zZT-Li-Fak"/>
+                        <outlet property="timerLights" destination="rEM-MW-yDG" id="zhY-xX-bTy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

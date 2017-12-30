@@ -13,6 +13,7 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     //MARK: Properties
     @IBOutlet weak var TimeLeftLabel: UILabel!
     @IBOutlet weak var selectTimeControl: SelectTimeControl!
+    @IBOutlet weak var timerLights: TimerLights!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,9 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     }
     
     func didPressButton(button: UIButton) {
+        let secondsLeft = Int((button.titleLabel?.text)!)!;
         TimeLeftLabel.text = button.titleLabel?.text;
+        timerLights.selectLightsBasedOnSecondsLeft(seconds: secondsLeft);
     }
 
 
