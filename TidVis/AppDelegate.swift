@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol SelectTimeControlDelegate {
+    func didPressButton(button: UIButton);
+}
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

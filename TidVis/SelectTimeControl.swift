@@ -10,6 +10,8 @@ import UIKit
 
 @IBDesignable class SelectTimeControl: UIStackView {
     
+    var delegate: SelectTimeControlDelegate!;
+    
     var timeButtons = [UIButton]();
     
     var buttonCount = 4;
@@ -64,13 +66,17 @@ import UIKit
         //Add accessibility label
         //button.accessibilityLabel = "Set \(index + 1) star rating";
         //Setup the button action
-        //button.addTarget(self, action: #selector(SelectTimeControl.ratingButtonTapped(button:)), for: .touchUpInside);
+        button.addTarget(self, action: #selector(SelectTimeControl.buttonPressed(button:)), for: .touchUpInside);
         
         //Add the button to the stack
         addArrangedSubview(button);
         
         //Add the new button to the array
         timeButtons.append(button);
+    }
+    
+    @objc func buttonPressed(button: UIButton) {
+        delegate.didPressButton(button:button);
     }
 
 }
