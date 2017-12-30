@@ -29,14 +29,27 @@ import UIKit
     
     //MARK: Public functions
     func selectLightsBasedOnSecondsLeft(seconds: Int) {
-        let minutesLeft: Int = seconds;
+        let minutesLeft: Int = seconds / 60;
         for index in 0..<lights.count {
-            if(index <= minutesLeft) {
+            if(index < minutesLeft) {
                 lights[index].backgroundColor = selectedLightColor;
             }
             else {
                 lights[index].backgroundColor = normalLightColor;
             }
+        }
+    }
+    
+    func showTimeIsUp() {
+        for light in lights {
+            light.flashBetweenColors(fromColor: selectedLightColor, toColor: normalLightColor);
+        }
+    }
+    
+    func stopAnimation() {
+        for light in lights {
+            light.layer.removeAllAnimations();
+            light.layer.layoutIfNeeded();
         }
     }
     

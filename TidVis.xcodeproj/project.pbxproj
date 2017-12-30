@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F6A856F51FF821FA00A7B9B5 /* TimerLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A856F41FF821FA00A7B9B5 /* TimerLights.swift */; };
+		F6A856F71FF82ED800A7B9B5 /* UiButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A856F61FF82ED800A7B9B5 /* UiButtonExtensions.swift */; };
 		F6DC83DD1FF7751400A89B67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC83DC1FF7751400A89B67 /* AppDelegate.swift */; };
 		F6DC83DF1FF7751400A89B67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC83DE1FF7751400A89B67 /* ViewController.swift */; };
 		F6DC83E21FF7751400A89B67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F6DC83E01FF7751400A89B67 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		F6A856F41FF821FA00A7B9B5 /* TimerLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLights.swift; sourceTree = "<group>"; };
+		F6A856F61FF82ED800A7B9B5 /* UiButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiButtonExtensions.swift; sourceTree = "<group>"; };
 		F6DC83D91FF7751400A89B67 /* TidVis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TidVis.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DC83DC1FF7751400A89B67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DC83DE1FF7751400A89B67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				F6DC83E81FF7751400A89B67 /* Info.plist */,
 				F6DC83FC1FF775AD00A89B67 /* SelectTimeControl.swift */,
 				F6A856F41FF821FA00A7B9B5 /* TimerLights.swift */,
+				F6A856F61FF82ED800A7B9B5 /* UiButtonExtensions.swift */,
 			);
 			path = TidVis;
 			sourceTree = "<group>";
@@ -209,6 +212,7 @@
 				F6DC83DF1FF7751400A89B67 /* ViewController.swift in Sources */,
 				F6DC83FD1FF775AD00A89B67 /* SelectTimeControl.swift in Sources */,
 				F6DC83DD1FF7751400A89B67 /* AppDelegate.swift in Sources */,
+				F6A856F71FF82ED800A7B9B5 /* UiButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +368,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFA5728V3U;
 				INFOPLIST_FILE = TidVis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bulleriberg.TidVis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -379,6 +384,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DFA5728V3U;
 				INFOPLIST_FILE = TidVis/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bulleriberg.TidVis;
 				PRODUCT_NAME = "$(TARGET_NAME)";
