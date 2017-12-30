@@ -38,8 +38,8 @@ import UIKit
         }
         timeButtons.removeAll();
         
-        addTimerButton(title: "1", color: UIColor.blue);
-        addTimerButton(title: "2", color: UIColor.green);
+        addTimerButton(title: "5", color: UIColor.blue);
+        addTimerButton(title: "10", color: UIColor.green);
         addTimerButton(title: "15", color: UIColor.orange);
         addTimerButton(title: "20", color: UIColor.red);
         
