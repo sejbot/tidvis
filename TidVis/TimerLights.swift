@@ -14,8 +14,8 @@ import UIKit
     var lights = [UIButton]();
     var lightDiameter: CGFloat = 22.0;
     var lightCount = 20;
-    var normalLightColor = UIColor(red: 0.85, green: 0, blue: 0, alpha: 1);
-    var selectedLightColor = UIColor(red: 1, green: 0.4, blue: 0.4, alpha: 1)
+    var normalLightColor = UIColor(red: 0.65, green: 0.2, blue: 0.2, alpha: 1);
+    var selectedLightColor = UIColor(red: 1, green: 0, blue: 0, alpha: 1)
     
     override init(frame: CGRect) {
         super.init(frame:frame);

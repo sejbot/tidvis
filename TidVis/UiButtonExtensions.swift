@@ -12,7 +12,7 @@ extension UIButton {
     func flashBetweenColors(fromColor: UIColor, toColor: UIColor) {
         
         let flash = CABasicAnimation(keyPath: "backgroundColor")
-        flash.duration = 0.5
+        flash.duration = 0.3
         flash.fromValue = fromColor.cgColor
         flash.toValue = toColor.cgColor
         flash.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
