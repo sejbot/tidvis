@@ -7,6 +7,7 @@
 //
 
 import UIKit;
+import UserNotifications;
 import AudioToolbox;
 
 class ViewController: UIViewController, SelectTimeControlDelegate {
@@ -30,6 +31,7 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
             timerLights.stopAnimation();
             secondsLeft = Int((button.titleLabel?.text)!)! * 60 - 1;
             timerLights.selectLightsBasedOnSecondsLeft(seconds: secondsLeft);
+            setupNotification(secondsLeft: secondsLeft);
             runTimer();
         }
     }
@@ -56,6 +58,24 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
             secondsLeft -= 1;
             timerLights.selectLightsBasedOnSecondsLeft(seconds: secondsLeft);
         }
+    }
+    
+    func setupNotification(secondsLeft: Int) {
+        print("setting up notification");
+        let content = UNMutableNotificationContent();
+        content.title = NSString.localizedUserNotificationString(forKey: "Tiden är slut!", arguments: nil);
+        content.body = "Upp och hoppa!"
+        content.sound = UNNotificationSound.default();
+        
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: TimeInterval(secondsLeft), repeats: false);
+        print("Notification will fire at \(trigger.nextTriggerDate())");
+        let request = UNNotificationRequest(identifier: "TimerCountdown", content: content, trigger: trigger);
+        let center = UNUserNotificationCenter.current();
+        center.add(request) { (error: Error?) in
+            if let theError = error {
+                print(theError.localizedDescription);
+            }
+        };
     }
 
 

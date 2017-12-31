@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UserNotifications;
 
 protocol SelectTimeControlDelegate {
     func didPressButton(button: UIButton);
@@ -19,6 +20,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         UIApplication.shared.isIdleTimerDisabled = true
+        let options: UNAuthorizationOptions = [.alert, .sound];
+        let center = UNUserNotificationCenter.current();
+        center.requestAuthorization(options: options) {
+            (granted, error) in
+            if !granted {
+                print("Something went wrong")
+            }
+        }
         // Override point for customization after application launch.
         return true
     }
