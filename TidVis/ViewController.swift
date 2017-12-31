@@ -19,6 +19,7 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     var timer = Timer();
     var isTimerRunning = false;
     var secondsLeft = 0;
+    var endDate: Date = Date.init();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,12 +48,13 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     }
     
     @objc func updateTimer() {
+        secondsLeft = Calendar.current.dateComponents([.second], from: Date.init(), to: endDate).second ?? 0;
+        print("\(secondsLeft) seconds left");
         if(secondsLeft < 1) {
             timer.invalidate();
             isTimerRunning = false;
             timerLights.showTimeIsUp();
             playSoundTimeIsUp();
-            //Send alert
         }
         else {
             secondsLeft -= 1;
@@ -76,8 +78,8 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
                 print(theError.localizedDescription);
             }
         };
+        
+        endDate = trigger.nextTriggerDate()!;
     }
-
-
 }
 

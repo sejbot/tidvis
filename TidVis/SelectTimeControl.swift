@@ -38,12 +38,12 @@ import UIKit
         }
         timeButtons.removeAll();
         
+        //Add buttons
         addTimerButton(title: "5", color: UIColor.blue);
         addTimerButton(title: "10", color: UIColor.green);
         addTimerButton(title: "15", color: UIColor.orange);
         addTimerButton(title: "20", color: UIColor.red);
         
-        //updateButtonSelectedStates();
     }
     
     private func addTimerButton(title: String, color: UIColor) {
