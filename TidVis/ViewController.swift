@@ -9,6 +9,7 @@
 import UIKit;
 import UserNotifications;
 import AudioToolbox;
+import AVFoundation;
 
 class ViewController: UIViewController, SelectTimeControlDelegate {
     
@@ -20,10 +21,13 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     var isTimerRunning = false;
     var secondsLeft = 0;
     var endDate: Date = Date.init();
+    var viewOrder = 0;
+    var buttonValues = [String]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
         selectTimeControl.delegate = self;
+        selectTimeControl.setupButtons(buttonValues);
     }
     
     //MARK: Public methods
@@ -43,14 +47,23 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     }
     
     func playSoundTimeIsUp() {
+        //let path = Bundle.main.path(forResource: "analog-watch-alarm_daniel-simion.mp3", ofType:nil)!
+        //let url = URL(fileURLWithPath: path)
         let systemSoundId: SystemSoundID = 1304;
         AudioServicesPlaySystemSound(systemSoundId);
+        //do {
+        //    let alarm = try AVAudioPlayer(contentsOf: url);
+        //    alarm.play();
+        //}
+        //catch {
+        //    print("Couldn't load file \(url)");
+        //}
     }
     
     @objc func updateTimer() {
         secondsLeft = Calendar.current.dateComponents([.second], from: Date.init(), to: endDate).second ?? 0;
         print("\(secondsLeft) seconds left");
-        if(secondsLeft < 1) {
+        if(secondsLeft < 0) {
             timer.invalidate();
             isTimerRunning = false;
             timerLights.showTimeIsUp();

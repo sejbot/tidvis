@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F6813A451FFABCFA00C1406F /* analog-watch-alarm_daniel-simion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F6813A441FFABCFA00C1406F /* analog-watch-alarm_daniel-simion.mp3 */; };
+		F6813A4C1FFC194D00C1406F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6813A4B1FFC194D00C1406F /* RootViewController.swift */; };
+		F6813A4E1FFC1FA300C1406F /* ModelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6813A4D1FFC1FA300C1406F /* ModelController.swift */; };
 		F6A856F51FF821FA00A7B9B5 /* TimerLights.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A856F41FF821FA00A7B9B5 /* TimerLights.swift */; };
 		F6A856F71FF82ED800A7B9B5 /* UiButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6A856F61FF82ED800A7B9B5 /* UiButtonExtensions.swift */; };
 		F6DC83DD1FF7751400A89B67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DC83DC1FF7751400A89B67 /* AppDelegate.swift */; };
@@ -29,6 +32,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F6813A441FFABCFA00C1406F /* analog-watch-alarm_daniel-simion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "analog-watch-alarm_daniel-simion.mp3"; sourceTree = "<group>"; };
+		F6813A4B1FFC194D00C1406F /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		F6813A4D1FFC1FA300C1406F /* ModelController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelController.swift; sourceTree = "<group>"; };
 		F6A856F41FF821FA00A7B9B5 /* TimerLights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerLights.swift; sourceTree = "<group>"; };
 		F6A856F61FF82ED800A7B9B5 /* UiButtonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UiButtonExtensions.swift; sourceTree = "<group>"; };
 		F6DC83D91FF7751400A89B67 /* TidVis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TidVis.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +68,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F6813A461FFABD3000C1406F /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		F6DC83D01FF7751400A89B67 = {
 			isa = PBXGroup;
 			children = (
@@ -83,9 +96,13 @@
 		F6DC83DB1FF7751400A89B67 /* TidVis */ = {
 			isa = PBXGroup;
 			children = (
+				F6813A441FFABCFA00C1406F /* analog-watch-alarm_daniel-simion.mp3 */,
+				F6813A461FFABD3000C1406F /* Sounds */,
 				F6DC83DC1FF7751400A89B67 /* AppDelegate.swift */,
 				F6DC83DE1FF7751400A89B67 /* ViewController.swift */,
 				F6DC83E01FF7751400A89B67 /* Main.storyboard */,
+				F6813A4B1FFC194D00C1406F /* RootViewController.swift */,
+				F6813A4D1FFC1FA300C1406F /* ModelController.swift */,
 				F6DC83E31FF7751400A89B67 /* Assets.xcassets */,
 				F6DC83E51FF7751400A89B67 /* LaunchScreen.storyboard */,
 				F6DC83E81FF7751400A89B67 /* Info.plist */,
@@ -190,6 +207,7 @@
 			files = (
 				F6DC83E71FF7751400A89B67 /* LaunchScreen.storyboard in Resources */,
 				F6DC83E41FF7751400A89B67 /* Assets.xcassets in Resources */,
+				F6813A451FFABCFA00C1406F /* analog-watch-alarm_daniel-simion.mp3 in Resources */,
 				F6DC83E21FF7751400A89B67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,8 +228,10 @@
 			files = (
 				F6A856F51FF821FA00A7B9B5 /* TimerLights.swift in Sources */,
 				F6DC83DF1FF7751400A89B67 /* ViewController.swift in Sources */,
+				F6813A4C1FFC194D00C1406F /* RootViewController.swift in Sources */,
 				F6DC83FD1FF775AD00A89B67 /* SelectTimeControl.swift in Sources */,
 				F6DC83DD1FF7751400A89B67 /* AppDelegate.swift in Sources */,
+				F6813A4E1FFC1FA300C1406F /* ModelController.swift in Sources */,
 				F6A856F71FF82ED800A7B9B5 /* UiButtonExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
