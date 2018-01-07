@@ -28,6 +28,9 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
         super.viewDidLoad()
         selectTimeControl.delegate = self;
         selectTimeControl.setupButtons(buttonValues);
+        if(isTimerRunning) {
+            timerLights.selectLightsBasedOnSecondsLeft(seconds: secondsLeft);
+        }
     }
     
     //MARK: Public methods
@@ -62,7 +65,6 @@ class ViewController: UIViewController, SelectTimeControlDelegate {
     
     @objc func updateTimer() {
         secondsLeft = Calendar.current.dateComponents([.second], from: Date.init(), to: endDate).second ?? 0;
-        print("\(secondsLeft) seconds left");
         if(secondsLeft < 0) {
             timer.invalidate();
             isTimerRunning = false;

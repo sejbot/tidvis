@@ -14,8 +14,8 @@ import UIKit
     var lights = [UIButton]();
     var lightDiameter: CGFloat = 22.0;
     var lightCount = 20;
-    var normalLightColor = UIColor(red: 193/255, green: 0, blue: 0, alpha: 1);
-    var selectedLightColor = UIColor(red: 255/255, green: 50/255, blue: 50/255, alpha: 1)
+    var normalLightColor = UIColor(red: 138/255, green: 28/255, blue: 28/255, alpha: 1);
+    var selectedLightColor = UIColor(red: 248/255, green: 69/255, blue: 33/255, alpha: 1)
     
     override init(frame: CGRect) {
         super.init(frame:frame);
@@ -62,7 +62,7 @@ import UIKit
         }
         lights.removeAll();
         
-        for index in 0..<lightCount {
+        for _ in 0..<lightCount {
             let light = UIButton();
             light.backgroundColor = normalLightColor;
             
